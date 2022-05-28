@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pfj-Hb-6uf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pokemon List View Controller-->
+        <scene sceneID="nzp-UV-LK7">
+            <objects>
+                <collectionViewController id="pfj-Hb-6uf" customClass="PokemonListViewController" customModule="SampleProjectMVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Vi9-bC-rno">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MOs-Gw-2m6">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="iQR-Ow-XvX">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ma4-0n-z3I">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="pfj-Hb-6uf" id="8B5-ed-Rha"/>
+                            <outlet property="delegate" destination="pfj-Hb-6uf" id="Ffs-PY-sl1"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <segue destination="n2m-r2-2yt" kind="show" identifier="showPokemonDetails" id="z5Z-aA-0SK"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Qa-Tt-etY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="175" y="-44"/>
+        </scene>
+        <!--Pokemon Detail View Controller-->
+        <scene sceneID="mVd-kZ-wG8">
+            <objects>
+                <viewController id="n2m-r2-2yt" customClass="PokemonDetailViewController" customModule="SampleProjectMVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0MI-If-gkS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pc5-HA-1u0">
+                                <rect key="frame" x="8" y="16" width="398" height="505"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="o5V-el-VUY">
+                                <rect key="frame" x="8" y="537" width="398" height="263"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="J7g-ov-dRV">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="aLr-Ql-zIu">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GUP-i9-Riv">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XOe-eP-jW0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="o5V-el-VUY" firstAttribute="leading" secondItem="XOe-eP-jW0" secondAttribute="leading" constant="8" id="44u-G8-5YH"/>
+                            <constraint firstItem="Pc5-HA-1u0" firstAttribute="top" secondItem="XOe-eP-jW0" secondAttribute="top" constant="16" id="91e-E2-GI5"/>
+                            <constraint firstItem="Pc5-HA-1u0" firstAttribute="leading" secondItem="XOe-eP-jW0" secondAttribute="leading" constant="8" id="H1g-NK-YNQ"/>
+                            <constraint firstItem="o5V-el-VUY" firstAttribute="top" secondItem="Pc5-HA-1u0" secondAttribute="bottom" constant="16" id="Lvm-jD-dH5"/>
+                            <constraint firstItem="XOe-eP-jW0" firstAttribute="trailing" secondItem="Pc5-HA-1u0" secondAttribute="trailing" constant="8" id="RUK-H4-QFZ"/>
+                            <constraint firstItem="XOe-eP-jW0" firstAttribute="bottom" secondItem="o5V-el-VUY" secondAttribute="bottom" constant="8" id="Tfk-oa-izu"/>
+                            <constraint firstItem="XOe-eP-jW0" firstAttribute="trailing" secondItem="o5V-el-VUY" secondAttribute="trailing" constant="8" id="evx-Rc-QpR"/>
+                            <constraint firstItem="Pc5-HA-1u0" firstAttribute="height" secondItem="0MI-If-gkS" secondAttribute="height" multiplier="0.6" id="fXk-bX-4kW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nV9-Ee-a3A"/>
+                    <connections>
+                        <outlet property="collectionDetailView" destination="o5V-el-VUY" id="G5w-ZC-414"/>
+                        <outlet property="imageView" destination="Pc5-HA-1u0" id="jA3-2O-Ksl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YMA-68-5QH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1148" y="-40"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
